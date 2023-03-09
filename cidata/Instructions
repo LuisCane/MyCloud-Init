@@ -1,0 +1,12 @@
+Make cidata iso for cloud init
+Recommended packages: whois
+
+Edit Meta-data, network-config, and user-data as needed
+Generate passwd hash with 
+mkpasswd -m sha-512
+copy password hash into user-data
+
+Generate the iso file
+genisoimage -output cidata.iso -V cidata -r -J meta-data network-config user-data
+
+Mount cidata iso to VM

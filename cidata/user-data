@@ -1,0 +1,10 @@
+#cloud-config
+hostname: Hostname
+manage_etc_hosts: true
+users: user
+password: $6$7TW.YfYBAAugH4CN$v6gy7V7mZ6f5sTX5mo74FmejeN7gD.LFYKBizNdmnSd7W2smaoODnD/lf274.YreC2iMIwme75huTn1G/Aoyt0 
+chpasswd:
+  expire: False
+users:
+  - default
+package_upgrade: true
